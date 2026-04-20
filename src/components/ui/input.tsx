@@ -33,8 +33,8 @@ return(
          bg-gray-50 border border-gray-200
          rounded-lg text-sm text-gray-800
          placeholder:text-gray-400
-         focus:outline-none focus:bg-white focus:border-purple-400 focus-ring-2 focus-ring-purple-100
-         transition-all durationon-15o
+         focus:outline-none focus:bg-white focus:border-purple-400 focus:ring-2 focus:ring-purple-100
+         transition-all duration-150
          
          "
         
