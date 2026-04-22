@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify"
-import Signup from "./pages/Signup"
+import { Signup } from "./pages/Signup"
 import { Dashboard } from "./pages/Dashboard"
 import { ContextProvider } from "./hooks/Context"
 import { Login } from "./pages/Login";
