@@ -39,7 +39,7 @@ function App() {
         
         </ContextProvider>}/>
 
-        <Route path="/brainly/:shareLinkd" element={<SharedBrain/>}/>
+        <Route path="/brainly/:shareLink" element={<SharedBrain/>}/>
 
 
       

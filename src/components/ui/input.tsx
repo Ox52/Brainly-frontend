@@ -1,34 +1,29 @@
-
 interface InputProps {
-
-    placeholder?: string;
-    inputRef?:any;
-    label?:string;
-    type?:string;
-
+  placeholder?: string;
+  inputRef?: any;
+  label?: string;
+  type?: string;
 }
 
-export const Input = ({placeholder, inputRef , label , type="text"}:InputProps)=>{
-
-return(
-
-
+export const Input = ({
+  placeholder,
+  inputRef,
+  label,
+  type = "text",
+}: InputProps) => {
+  return (
     <div className=" flex flex-col gap-1.5 w-full ">
+      {label && (
+        <label className="text-xs font-semibold text-gray-500 uppercase tracking-tight">
+          {label}
+        </label>
+      )}
 
-
-        {label && (
-
-            <label className="text-xs font-semibold text-gray-500 uppercase tracking-tight">
-
-                {label}
-            </label>
-        )}
-
-        <input
-         ref={inputRef}
-         placeholder={placeholder}
-         type={type}
-         className="
+      <input
+        ref={inputRef}
+        placeholder={placeholder}
+        type={type}
+        className="
          w-full px-4 py-2.5
          bg-gray-50 border border-gray-200
          rounded-lg text-sm text-gray-800
@@ -37,11 +32,7 @@ return(
          transition-all duration-150
          
          "
-        
-        
-        />
+      />
     </div>
-)
-
-
-}
+  );
+};
