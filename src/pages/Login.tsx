@@ -37,8 +37,14 @@ export const Login = () =>{
             navigate("/dashboard");
         }catch(error:any){
 
-            console.error("Login error" ,error.response?.data);
-            toast.error("Invalid credentials");
+            console.error("Login error" ,error.response?.data ?? error.message);
+            const message =
+              error?.response?.data?.message ||
+              error?.response?.data?.error ||
+              (error?.code === "ERR_NETWORK"
+                ? "Network error. Check VITE_API_URL and backend CORS."
+                : "Login failed. Please try again.");
+            toast.error(message);
 
 
         }

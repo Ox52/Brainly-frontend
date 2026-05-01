@@ -26,8 +26,14 @@ export const Signup = () => {
       toast.success("Account created successfully");
       navigate("/login");
     } catch (error: any) {
-      console.error("Signup error:", error.response?.data);
-      toast.error("User already exists");
+      console.error("Signup error:", error.response?.data ?? error.message);
+      const message =
+        error?.response?.data?.message ||
+        error?.response?.data?.error ||
+        (error?.code === "ERR_NETWORK"
+          ? "Network error. Check VITE_API_URL and backend CORS."
+          : "Signup failed. Please try again.");
+      toast.error(message);
     }
   };
 
